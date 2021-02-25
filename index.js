@@ -24,8 +24,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //remove a move from the list
   ul.addEventListener("click", function (event) {
-    let moveItem = event.target
-    moveItem.remove()
+    if (event.target.matches('li')) {
+    event.target.remove()
+    }
   })
 
   //on right click, move through list of moves
